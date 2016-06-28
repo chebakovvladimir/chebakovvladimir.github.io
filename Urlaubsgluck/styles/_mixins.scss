@@ -1,0 +1,27 @@
+@mixin clearfix() {
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+	};
+@mixin sprite ($url, $sprite-position, $height, $width) {
+		background: $url;
+		background-position: $sprite-position;
+		width: $width;
+		height: $height;
+};
+@mixin redblock(){
+	border-radius: 20px;
+	background-color: #ff4e50;
+		padding: 10px 40px;
+
+}
+@mixin whiteblock(){
+	border: 2px solid #fff;
+	border-radius: 20px;
+	padding: 5px 15px;
+}

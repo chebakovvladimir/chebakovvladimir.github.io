@@ -1,0 +1,251 @@
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+    @import '../_variables';
+    @import '../_mixins';
+    @import '../_reset';
+    @import '../_sprites';
+.header {
+	background: url(../../img/release/bg.jpg) top center no-repeat;
+	height: 700px;
+	&__wrapper {
+		.login {
+			float: right;
+			margin: 47px 1px;
+			&__link {
+				padding: 16px;
+			}
+			&--signup {
+				padding: 7px 15px;
+			}
+		}
+		h2 {
+			float: left;
+			margin: 40px;
+			margin: 47px 0;
+		}
+		h1 {
+			clear:both;
+			font: $fontMB52;
+			margin-top: 215px;
+			padding: 0 175px;
+		}
+		h3 {
+			font: $fontRL24;
+			padding-top: 23px;
+		}
+		.login--find {
+			padding: 10px 0;
+			margin-top: 35px;
+		}
+	}
+}
+.steps__static {
+	display: none;
+}
+.description {
+	height: 535px;
+	&__wrapper {
+		margin-top: 90px;
+		.jcarousel-wrapper-position {
+			margin: 21px auto;
+			text-align: center;
+			overflow: hidden;
+		}
+		.steps__slider {
+			display: block;
+		}
+		.jcarousel-wrapper {
+			display: inline-block;
+			overflow: hidden;
+			text-align: center;
+			position: relative;
+			margin: 8px;
+			width: 30%;
+		}
+		.jcarousel-1,
+		.jcarousel-2,
+		.jcarousel-3 {
+			display: block;
+			overflow: hidden;
+			width: 298px;
+			position: relative;
+		}
+		.jcarousel-1 ul,
+		.jcarousel-2 ul,
+		.jcarousel-3 ul {
+			width: 20000em;
+			position: relative;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.jcarousel-1 li,
+		.jcarousel-2 li,
+		.jcarousel-3 li {
+			float: left;
+			width: 298px;
+		}
+		.jcarousel-1 li img,
+		.jcarousel-2 li img,
+		.jcarousel-3 li img {
+			width: 100%;
+			height: 400px;
+		}
+		.jcarousel-prev-1,
+		.jcarousel-prev-2,
+		.jcarousel-prev-3 {
+			position: absolute;
+			top: 153px;
+			left: 17px;
+			background: url(../../img/release/arrows_sprite.png) 0 0 no-repeat;
+			width: 30px;
+			height: 55px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.jcarousel-next-1,
+		.jcarousel-next-2,
+		.jcarousel-next-3 {
+			position: absolute;
+			top: 153px;
+			right: 15px;
+			background: url(../../img/release/arrows_sprite.png) -30px 0px no-repeat;
+			width: 40px;
+			height: 55px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.inner__slider1,
+		.inner__slider2,
+		.inner__slider3 {
+			position: absolute;
+			margin-top: 157px;
+			text-align: left;
+			.step__title {
+				color: $colorwhite;
+			}
+		}
+		.inner__slider2 {
+			margin-top: 187px;
+		}
+		.step__number {
+			padding: 3px 11px;
+			margin: 12px;
+		}
+		.step__title {
+			padding: 106px 0 0 18px;
+		}
+		.step__text {
+			padding: 13px 18px;
+		}
+	}
+}
+.partners {
+	margin-bottom: 90px;
+	&__wrapper {
+		padding-top: 21px;
+	}
+	&__list {
+		width: 94%;
+		height: 244px;
+		margin: 27px auto;
+	}
+	&__item {
+		display: inline-block;
+		float: left;
+		width: 25%;
+	}
+	&__other {
+		clear: both;
+		width: 190px;
+		padding: 10px 0;
+	}
+	&__name {
+		padding: 17px 0 13px;
+	}
+	&__info {
+		padding: 0 20px;
+	}
+}
+.img-grid {
+	.grid__wrapper {
+		width: 74%;
+		margin: 0 auto;
+		.grid {
+			padding: 0;
+			width: 940px;
+			&-item {
+				width: 300px;
+				float: left;
+				height: 310px;
+				margin-bottom: 20px;
+			}
+			.grid-item--width2 {
+				width: 620px;
+			}
+			.img__tag {
+				top: 45%;
+			}
+		}
+		.partners__search {
+			display: inline-block;
+			width: 162px;
+			padding: 10px 0;
+		}
+		p {
+			padding-top: 27px;
+		}
+		.img__search {
+			margin: 38px 6px 0 0px;
+			width: 218px;
+		}
+	}
+}
+.footer {
+	@include clearfix();
+	margin-top: 86px;
+	height: 200px;
+	.footer__wrapper {
+		padding: 25px;
+		width: 80%;
+		margin: 0 auto;
+		position: relative;
+		h2 {
+			float: left;
+			padding-right: 175px;
+			padding: 11px 95px 0 70px;
+			letter-spacing: 1px;
+		}
+		.nav {
+			float: left;
+			padding: 11px 92px 0 0;
+			&__menu {
+				text-align: left;
+			}
+			&__item {
+				display: block;
+				line-height: 1;
+			}
+		}
+		h4 {
+			padding: 0 0 13px 0;
+		}
+		span {
+			float: left;
+			position: absolute;
+			top: 18px;
+			right: 95px;
+		}
+		.footer__title {
+			padding: 11px 70px 0 0;
+			float: left;
+		}
+		.logo {
+			display: none;
+		}
+        .logo-ie{
+            margin: 6px auto;
+            display: block;
+        }
+	}
+}
