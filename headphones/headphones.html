@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0104)http://www.corsair.com/en-eu/void-pro-surround-premium-gaming-headset-with-dolby-headphone-7-1-carbon-eu -->
+<html>
+<head id="Head1">
+    <title>Corsar</title>
+    <link rel="stylesheet" href="headphones/files/device-effect.css" type="text/css">
+</head>
+
+<body style="padding: 0; margin: 0;">
+
+<div class="device-widget">
+
+    <div class="inner show">
+        <div class="device-wrap show-mix">
+            <div class="green iframe active"><iframe src="headphones/green/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+            <div class="blue iframe"><iframe src="headphones/blue/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+            <div class="black iframe"><iframe src="headphones/black/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+        </div>
+        <div class="device-wrap hide-mix">
+            <div class="green iframe active"><iframe src="headphones/green_no_mic/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+            <div class="blue iframe"><iframe src="headphones/blue_no_mic/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+            <div class="black iframe"><iframe src="headphones/black_no_mic/headphones.html" allowfullscreen frameborder="0" scrolling="no"></iframe></div>
+        </div>
+    </div>
+
+    <div id="myTabs" class="nav ul-nav-tabs">
+        <div class="title-text div-li div-toogle">
+            <span class="title">Show removable miс</span>
+            <a class="toogle-mix hide" href="#" title="Remove">Remove</a>
+        </div>
+        <div class="title-text div-li">Color</div>
+        <div class="green div-li active"><a class="a_effect" id="green" href="#" title="Green"><span></span></a></div>
+        <div class="blue div-li"><a class="a_effect" id="blue" href="#" title="Blue"><span></span></a></div>
+        <div class="black div-li"><a class="a_effect" id="black" href="#" title="Black"><span></span></a></div>
+    </div>
+
+</div>
+
+
+
+
+<script src="headphones/files/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myTabs a.a_effect').click(function (e) {
+            e.preventDefault();
+            $('.div-li').removeClass('active');
+            $('.iframe').removeClass('active');
+            $(this).parent().addClass('active');
+            var exampl_class = $(this).attr('id');
+            $('.'+exampl_class + '').addClass('active');
+        });
+        $('#myTabs a.toogle-mix').click(function (e) {
+            e.preventDefault();
+           var visible = $(this).attr('class');
+           if( visible == 'toogle-mix hide' ){
+               var text = 'Attach';
+               $(this).removeClass('hide').addClass('show').attr('title', text).text(text);
+               $('.inner').removeClass('show').addClass('hide');
+
+           } else {
+               var text = 'Remove';
+               $(this).removeClass('show').addClass('hide').attr('title', text).text(text);;
+               $('.inner').removeClass('hide').addClass('show');
+           }
+
+
+        });
+    });
+</script>
+
+</body>
+</html>
