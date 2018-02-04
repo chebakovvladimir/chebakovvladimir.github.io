@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  <meta charset="utf-8">
+    <style>
+        #ambulance {
+            position: relative;
+            cursor: pointer;
+            width: 50%;
+            opacity: 0;
+            display: none;
+        }
+        body {
+            font-family: 'Pacifico', cursive;
+            padding: 30px;
+        }
+        div.gradient {
+            animation: background 0.5s infinite alternate;
+        }
+        #div {
+            height: 600px;
+            border-radius: 30px;
+            font-size: 100px;
+            text-align: center;
+            background: forestgreen;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            border: 5px solid #fff;
+        }
+
+        @keyframes background {
+            100% {
+                background-position: 600px 0;
+            }
+        }
+        #text {
+            margin:auto;
+        }
+        .wrapper {
+            position: relative;
+        }
+        #contacts{
+            font-size: 32px;
+            text-align: center;
+            border: 5px solid #000;
+            max-width: 50%;
+            margin: 49px auto;
+            transform: rotate(-6deg);
+            zoom: 0.1;
+            opacity: 0;
+        }
+        #content {
+            position: relative;
+        }
+        @keyframes move {
+            from { transform: translateX(0); }
+            to   { transform: translateX(700px); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="content">
+            <div id="div" class="">
+                <div id="text">Хочу сайт</div>
+            </div>
+            <img id="ambulance" src="http://printonic.ru/uploads/images/2016/02/20/img_56c898580e65b.jpg">
+        </div>
+        <div id="contacts">
+            <div class="">
+                Звони +380 95 123 456 78
+            </div>
+            <div class="">
+                Пиши - Viber +380 95 123 456 78
+            </div>
+            <div class="">
+                Пиши - Telegram +380 95 123 456 78
+            </div>
+            <div class="">
+                Пиши - Почта +380 95 123 456 78
+            </div>
+        </div>
+    </div>
+
+    <script>
+    div.onclick = function () {
+        this.classList.add('gradient');
+        this.style.background = 'linear-gradient(to right, red, blue, red)';
+        ambulance.style.display = 'block';
+        animate({
+            duration: 2000,
+            timing: circ,
+            draw: function(timePassed) {
+                div.style.height = -timePassed * 550 + 600 +'px';
+                div.style.width = -timePassed * 1000 + 1200 +'px';
+                div.style.left = timePassed * 300 + 'px';
+                text.style.fontSize = -timePassed * 75 + 100 + 'px';
+                ambulance.style.opacity = timePassed;
+            },
+            finishCalback: function () {
+                div.style.position = 'absolute';
+                div.style.zIndex = '100';
+                var n2000 = 2000;
+                var n300 = 300;
+                animate({
+                    duration: 3000,
+                    timing: circ,
+                    draw: function(timePassed) {
+                        ambulance.style.left = timePassed * n2000 + 'px';
+                        div.style.left = timePassed * n2000 + n300 +'px'
+                    },
+                    finishCalback: function () {
+                        ambulance.style.display = 'none';
+                        div.style.display = 'none';
+                        animate({
+                            duration: 1000,
+                            timing: circ,
+                            draw: function(timePassed) {
+                                contacts.style.opacity = timePassed;
+                                contacts.style.zoom = timePassed + 0.1;
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+    function circ(timeFraction) {
+        return 1 - Math.sin(Math.acos(timeFraction));
+    }
+    function animate({timing, draw, duration, finishCalback}) {
+
+        let start = performance.now();
+
+        requestAnimationFrame(function animate(time) {
+            // timeFraction goes from 0 to 1
+            let timeFraction = (time - start) / duration;
+            if (timeFraction > 1) timeFraction = 1;
+
+            // calculate the current animation state
+            let progress = timing(timeFraction);
+
+            draw(progress); // draw it
+
+            if (timeFraction < 1) {
+              requestAnimationFrame(animate);
+          } else {
+              finishCalback && finishCalback();
+          }
+          });
+        }
+        function animationFrame() {
+
+        }
+  </script>
+
+
+</body>
+
+</html>
