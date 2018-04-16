@@ -912,7 +912,7 @@ var guis = {
 			size: 5,
 			height: 2,
 			curveSegments: 12,
-			font: "helvetiker",
+			font: "Raleway",
 			weight: "regular",
 			bevelEnabled: false,
 			bevelThickness: 1,
