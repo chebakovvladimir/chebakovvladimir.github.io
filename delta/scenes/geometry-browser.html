@@ -29,8 +29,6 @@
 	</head>
 	<body>
 
-		<a id='newWindow' href='./geometry-browser.html' target='_blank'>Open in New Window</a>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
 		<script src='js/dat.gui.min.js'></script>
 		<script src="js/OrbitControls.js"></script>
@@ -39,7 +37,6 @@
 		<script src='js/geometry.js'></script>
 
 		<script>
-			document.getElementById( 'newWindow' ).href += window.location.hash;
 			var gui = new dat.GUI();
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 50 );

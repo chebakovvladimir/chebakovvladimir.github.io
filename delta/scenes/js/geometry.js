@@ -865,7 +865,7 @@ var guis = {
 		function generateGeometry() {
 
 			var loader = new THREE.FontLoader();
-			loader.load( 'https://fonts.google.com/specimen/Raleway', function ( font ) {
+			loader.load( '../fonts/Raleway-v4020-ExtraBold.otf', function ( font ) {
 
 				var geometry = new THREE.TextGeometry( data.text, {
 					font: font,
@@ -934,7 +934,7 @@ var guis = {
 		function generateGeometry() {
 
 			var loader = new THREE.FontLoader();
-			loader.load( '../../examples/fonts/' + data.font + '_' + data.weight + '.typeface.json', function ( font ) {
+			loader.load( 'fonts/Raleway-v4020-ExtraBold.otf', function ( font ) {
 
 				var geometry = new THREE.TextBufferGeometry( data.text, {
 					font: font,
