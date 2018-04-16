@@ -843,7 +843,7 @@ var guis = {
 			size: 5,
 			height: 2,
 			curveSegments: 12,
-			font: "helvetiker",
+			font: "Raleway",
 			weight: "regular",
 			bevelEnabled: false,
 			bevelThickness: 1,
@@ -865,7 +865,7 @@ var guis = {
 		function generateGeometry() {
 
 			var loader = new THREE.FontLoader();
-			loader.load( 'fonts/Raleway', function ( font ) {
+			loader.load( 'fonts/1Ptug8zYS_SKggPNyC0ITw.woff2', function ( font ) {
 
 				var geometry = new THREE.TextGeometry( data.text, {
 					font: font,
@@ -934,7 +934,7 @@ var guis = {
 		function generateGeometry() {
 
 			var loader = new THREE.FontLoader();
-			loader.load( 'fonts/Raleway', function ( font ) {
+			loader.load( 'fonts/1Ptug8zYS_SKggPNyC0ITw.woff2', function ( font ) {
 
 				var geometry = new THREE.TextBufferGeometry( data.text, {
 					font: font,
