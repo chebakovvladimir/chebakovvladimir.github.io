@@ -839,7 +839,7 @@ var guis = {
 	TextGeometry: function ( mesh ) {
 
 		var data = {
-			text: "TextGeometry",
+			text: "DELTA",
 			size: 5,
 			height: 2,
 			curveSegments: 12,
@@ -1342,7 +1342,7 @@ var guis = {
 
 function chooseFromHash( mesh ) {
 
-	var selectedGeometry = window.location.hash.substring( 1 ) || "TorusGeometry";
+	var selectedGeometry = window.location.hash.substring( 1 ) || "TextGeometry";
 
 	if ( guis[ selectedGeometry ] !== undefined ) {
 
