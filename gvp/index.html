@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GVP tutorial</title>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    </head>
+    <body>
+        <section class="youtube-video">
+            <div class="card-panel blue lighten-2">
+                <h5 class="grey-text text-darken-3 center-align">Что делать чтобы вставить ссылку на видео?</h5>
+            </div>
+            <div class="card-panel deep-orange lighten-5">
+                <div class="grey-text text-darken-3">
+                    Нужно перейти на страницу с видео, например, <a href="https://www.youtube.com/watch?v=NBukfAONbBk">Axomatic AXO 1000 для шприцов</a>
+                </div>
+                <div class="grey-text text-darken-3">
+                    Скопировать хеш или уникальный идентификатор видео можно 2-мя способами
+                </div>
+                <div class="grey-text text-darken-3">
+                    1) Скопировать из адресной строки например отсюда https://www.youtube.com/watch?v=NBukfAONbBk надо скопировать NBukfAONbBk
+                </div>
+                <div class="grey-text text-darken-3">
+                    2) Нажать кнопку поделиться и скопировать из всплывающего окна,
+                    например, https://youtu.be/NBukfAONbBk скопировать NBukfAONbBk
+                </div>
+            </div>
+            <div>
+                <img src="img/youtube.jpg" class="responsive-img">
+            </div>
+            <div>
+                <div class="grey-text text-darken-3">
+                    <div class="card-panel deep-orange lighten-5">
+                        Ниже можно проверить правильно ли скопирован хеш, нужно вставить хеш в поле и нажать кнопку проверить
+                    </div>
+                    <div class="row">
+                        <div class="card-panel light-green accent-3 col s6">
+                            <div class="">
+                                Правильно
+                            </div>
+                            <img src="img/youtube-success.jpg" class="responsive-img">
+                        </div>
+                        <div class="card-panel deep-orange accent-3 col s6">
+                            <div class="">
+                                Не правильно
+                            </div>
+                            <img src="img/youtube-error.jpg" class="responsive-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-panel deep-orange lighten-5">
+                    <div class="input-field">
+                        <input type="text" class="youtube-hash blue-text" id="youtube-hash"/>
+                        <label for="youtube-hash" class="blue-text">
+                            Пример хеша - NBukfAONbBk
+                        </label>
+                    </div>
+                    <button class="check-youtube waves-effect waves-light blue lighten-2 btn">Проверить</button>
+                </div>
+                <div class="video-container"></div>
+            </div>
+        </section>
+        <script>
+            $('.check-youtube').on('click', function () {
+                var hash = $('.youtube-hash').val();
+                $('iframe').remove();
+                $('.video-container').html($('<iframe/>', {
+                    css: {
+                        width: '640px',
+                        height: '360px'
+                    },
+                    src: 'https://www.youtube.com/embed/' + hash
+                }));
+            });
+        </script>
+        <style>
+            .youtube-video {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .youtube-video-title {
+                text-align: center;
+                font-size: 18px;
+            }
+            img.responsive-img {
+                width: 100%;
+            }
+        </style>
+    </body>
+</html>
