@@ -5,80 +5,31 @@
         <title></title>
     </head>
     <body>
-        <div class="mini-cart"></div>
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
+
         <script>
-            var cart = {}; //моя корзина
+        function initMap() {
+            var p1 = new google.maps.LatLng(50.904091364647186, 34.80847507377776);
+            var p2 = new google.maps.LatLng(50.9170757, 34.80850970000001);
 
-            function init() {
-                //вычитываем файл goods.json
-                $.getJSON("goods.json", goodsOut);
-            }
+            console.log(calcDistance(p1, p2));
 
-        function goodsOut(data) {
-            console.log('goodsOut', data);
-            //вывод на страницу
-            var out = '';
-            for (var key in data) {
-                out+='<tr class="cart_tovar">';
-                out+='<td>';
-                out+='<p class="tovar_name">'+data[key].MED_NAME+'</p>';
-                out+='</td>';
-                out+='<td>';
-                out+='<p class="tovar_manufacturer">'+data[key].VENDOR_NAME+'</p>';
-                out+='<p class="tovar_country">'+data[key].COUNTRY_NAME+'</p>';
-                out+='</td>';
-                out+='<td class="tovar_cost">от '+data[key].RPRICE+' ₽</td>';
-                out+='<td class="tovar_apteka">'+data[key].apteki+'</td>';
-                out+='<td>';
-                out+='<button class="add-to-cart" data-id="'+key+'">В корзину</button>';
-                out+='</td>';
-                out+='</tr>';
-            }
-            $('.goods-out').html(out);
-            $('.add-to-cart').on('click', addToCart);
-        }
-
-        function addToCart() {
-            //добавляем товар в корзину
-            var id = $(this).attr('data-id');
-            if (cart[id]!=undefined) {
-                cart[id]++;
-            }
-            else {
-                cart[id] = 1;
-            }
-            showMiniCart();
-            saveCart();
-        }
-
-        function saveCart() {
-            //сохраняю корзину в localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        function showMiniCart(){
-            //показываю содержимое корзины
-            var out = Object.keys(cart).length;
-            $('.mini-cart').html(out);
-        }
-
-        function loadCart() {
-            //проверяю есть ли в localStorage запись car
-            if (localStorage.getItem('cart')) {
-                //если есть - расшифровываю и записываю в переменную cart
-                cart = JSON.parse(localStorage.getItem('cart'));
-                showMiniCart();
+            //calculates distance between two points in km's
+           function calcDistance(p1, p2) {
+               var directionsService = new google.maps.DirectionsService;
+               directionsService.route({
+                   origin: p1,
+                   destination: p2,
+                   travelMode: 'DRIVING'
+               }, function(response, status) {
+                   if (status === 'OK') {
+                       console.log(response.routes[0].legs[0].distance.value);
+                   } else {
+                       console.log('Directions request failed due to ' + status);
+                   }
+              });
             }
         }
-
-        $(document).ready(function () {
-            init();
-            loadCart();
-        });
         </script>
     </body>
 </html>
