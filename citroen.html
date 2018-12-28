@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Citroen</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@material-ui/core/umd/material-ui.development.js"></script>
+    <script type="text/babel">
+    const banks = [{
+            name: 'Ощадбанк',
+            term: [{
+                12: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 4.99,
+                        20: 3.99,
+                        30: 2.99,
+                        50: 0.01,
+                        70: 0.01
+                    },
+                    insurance: 8.5
+                },
+                24: {
+                    commission: 1.5,
+                    percentage: {
+                        10: 9.99,
+                        20: 8.99,
+                        30: 7.99,
+                        50: 2.99,
+                        70: 0.01
+                    },
+                    insurance: 7.5
+                },
+                36: {
+                    commission: 1.5,
+                    percentage: {
+                        10: 10.99,
+                        20: 9.99,
+                        30: 9.99,
+                        50: 8.99,
+                        70: 5.99
+                    },
+                    insurance: 7.5
+                },
+                60: {
+                    commission: 1.5,
+                    percentage: {
+                        10: 12.99,
+                        20: 11.99,
+                        30: 11.99,
+                        50: 9.99,
+                        70: 8.99
+                    },
+                    insurance: 7.5
+                },
+                84: {
+                    commission: 1.5,
+                    percentage: {
+                        10: 12.99,
+                        20: 11.99,
+                        30: 11.99,
+                        50: 10.99,
+                        70: 9.99
+                    },
+                    insurance: 7.5
+                }
+            }]
+        },
+        {
+            name: 'Credit Agricole',
+            term: [{
+                12: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 5.7,
+                        20: 5.4,
+                        30: 1.25,
+                        40: 0.01,
+                        50: 0.01,
+                        60: 0.01
+                    },
+                    insurance: 8.13
+                },
+                24: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 10.15,
+                        20: 10,
+                        30: 7.75,
+                        40: 3.85,
+                        50: 0.01,
+                        60: 0.01
+                    },
+                    insurance: 8.13
+                },
+                36: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 12.2,
+                        20: 12.1,
+                        30: 11.95,
+                        40: 11,
+                        50: 9.9,
+                        60: 7.95
+                    },
+                    insurance: 8.13
+                },
+                48: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 13.3,
+                        20: 13.25,
+                        30: 13.15,
+                        40: 13,
+                        50: 12.8,
+                        60: 12.5
+                    },
+                    insurance: 8.13
+                },
+                60: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 13.75,
+                        20: 13.65,
+                        30: 13.6,
+                        40: 13.45,
+                        50: 13.3,
+                        60: 13.05
+                    },
+                    insurance: 8.13
+                },
+                72: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 14,
+                        20: 13.95,
+                        30: 13.9,
+                        40: 13.8,
+                        50: 13.65,
+                        60: 13.4
+                    },
+                    insurance: 8.13
+                },
+                84: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 14.15,
+                        20: 14.1,
+                        30: 14,
+                        40: 13.9,
+                        50: 13.75,
+                        60: 13.55
+                    },
+                    insurance: 8.13
+                }
+            }, {
+                12: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 3.8,
+                        20: 3.55,
+                        30: 0.01,
+                        40: 0.01,
+                        50: 0.01,
+                        60: 0.01
+                    },
+                    insurance: 8.13
+                },
+                24: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 8.8,
+                        20: 8.5,
+                        30: 5.85,
+                        40: 2.99,
+                        50: 0.01,
+                        60: 0.01
+                    },
+                    insurance: 8.13
+                },
+                36: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 11.25,
+                        20: 11.1,
+                        30: 9.99,
+                        40: 8.99,
+                        50: 7.99,
+                        60: 0.01
+                    },
+                    insurance: 8.13
+                },
+                48: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 12.35,
+                        20: 12.3,
+                        30: 12.2,
+                        40: 12.05,
+                        50: 11.85,
+                        60: 11.55
+                    },
+                    insurance: 8.13
+                },
+                60: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 12.8,
+                        20: 12.7,
+                        30: 12.6,
+                        40: 12.5,
+                        50: 12.35,
+                        60: 12.1
+                    },
+                    insurance: 8.13
+                },
+                72: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 13.05,
+                        20: 13,
+                        30: 12.95,
+                        40: 12.85,
+                        50: 12.7,
+                        60: 12.5
+                    },
+                    insurance: 8.13
+                },
+                84: {
+                    commission: 2.5,
+                    percentage: {
+                        10: 13.2,
+                        20: 13.15,
+                        30: 13.05,
+                        40: 12.95,
+                        50: 12.8,
+                        60: 12.7
+                    },
+                    insurance: 8.13
+                }
+            }]
+        }
+    ];
+
+    const cars = {
+        'C-Elysee': {
+            '1.2 МКПП бензин': {
+                live: 310000,
+                feel: 348200
+            },
+            '1.6 МКПП бензин': {
+                feel: 388100
+            },
+            '1.6 AКПП бензин': {
+                feel: 428800,
+                shine: 457400
+            },
+            '1.6 МКПП дизель': {
+                feel: 415800,
+                shine: 444300
+            },
+        },
+        'C3': {
+            '1.2 МКПП бензин': {
+                live: 352000,
+                feel: 390700,
+                shine: 443500
+            },
+            '1.2 AКПП бензин': {
+                feel: 494500,
+                shine: 524500
+            }
+        },
+        'C3 Aircross': {
+            '1.2 МКПП бензин': {
+                live: 445000
+            },
+            '1.6 МКПП бензин': {
+                feel: 553700
+            },
+            '1.2 AКПП бензин': {
+                feel: 581800,
+                shine: 604700
+            }
+        },
+        'C4 Cactus': {
+            '1.6 МКПП бензин': {
+                feel: 544000,
+                shine: 573000
+            },
+            '1.5 AКПП бензин': {
+                feel: 573000,
+                shine: 602100
+            }
+        },
+    };
+
+    const {
+      Table,
+      TableHead,
+      TableBody,
+      TableRow,
+      TableCell,
+      Select,
+      MenuItem,
+      InputLabel,
+      Input,
+      FormControl
+    } = window['material-ui'];
+
+    class CitroenTable extends React.Component {
+
+        state = {
+            sort: 'model',
+            asc: true
+        }
+
+        styles = {
+            header: { cursor: 'pointer' }
+        }
+
+        rows = [{
+            label: 'Модель',
+            name: 'model'
+        }, {
+            label: 'Тип',
+            name: 'type'
+        }, {
+            label: 'Комплектация',
+            name: 'equipment'
+        }, {
+            label: 'Банк',
+            name: 'bank'
+        }, {
+            label: 'Месяцы',
+            name: 'months'
+        }, {
+            label: 'Годовой процент',
+            name: 'percent'
+        }, {
+            label: 'Цена',
+            name: 'price'
+        }, {
+            label: 'Первоначальный взнос грн',
+            name: 'initalFee'
+        }, {
+            label: 'Первоначальный взнос %',
+            name: 'initalFeePercent'
+        }, {
+            label: 'Ежемесячный платеж',
+            name: 'monthlyFee'
+        }, {
+            label: 'Переплата',
+            name: 'overpayment'
+        }, {
+            label: 'Итого',
+            name: 'total'
+        }]
+
+        getData = (banks, cars) => {
+            const result = [];
+            Object.entries(cars).forEach(([modelName, car]) =>
+                Object.entries(car).forEach(([typeName, equipments]) =>
+                    Object.entries(equipments).forEach(([equipmentName, price]) =>
+                        banks.forEach(bank => {
+                            const term = bank.name === 'Credit Agricole' && !['C3', 'C4 Cactus'].includes(modelName) ? bank.term[1]: bank.term[0];
+                            Object.entries(term).forEach(([months, data]) =>
+                                Object.entries(data.percentage).forEach(([initalFeePercent, percent]) => {
+                                    const initalFee = (price * (initalFeePercent / 100)) * ((data.commission + data.insurance) / 100 + 1);
+                                    const monthlyFee = price * (1 - (initalFeePercent / 100)) / months * (1 + percent / 100);
+                                    const overpayment = initalFee + monthlyFee * months - price;
+                                    result.push({
+                                        id: result.length,
+                                        model: modelName,
+                                        type: typeName,
+                                        equipment: equipmentName,
+                                        bank: bank.name,
+                                        months,
+                                        price,
+                                        percent,
+                                        initalFeePercent,
+                                        initalFee,
+                                        monthlyFee,
+                                        overpayment,
+                                        total: price + overpayment
+                                    });
+                                })
+                        )
+                    })
+                    )
+                )
+            );
+            return result;
+        }
+
+        getSortData = ({ data, sort, asc, filters }) => {
+            let sortedData = data.sort((a, b) => asc ? a[sort] - b[sort] : b[sort] - a[sort]);
+            Object.entries(filters).forEach(([key, values]) => {
+                sortedData = sortedData.filter(item => !values.length || values.includes(item[key]));
+            });
+            return sortedData;
+        }
+        render() {
+            const {
+                banks = [],
+                cars = {},
+                filters = {}
+            } = this.props;
+            const { sort, asc } = this.state;
+            const data = this.getSortData({ data: this.getData(banks, cars), sort, asc, filters });
+            return (
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                {this.rows.map(r =>
+                                    <TableCell
+                                        key={r.name + r.label}
+                                        style={this.styles.header}
+                                        onClick={() => this.setState({ sort: r.name, asc: !asc })}
+                                    >
+                                        {r.label}
+                                    </TableCell>
+                                )}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {data.map((row, index) =>
+                                <TableRow key={row.id}>
+                                    {this.rows.map(r =>
+                                        <TableCell key={r.label + row[r.name]}>
+                                            {row[r.name]}
+                                        </TableCell>
+                                    )}
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+            );
+        }
+    }
+
+    class CitroenFilters extends React.Component {
+
+        state = {
+            model: [],
+            type: [],
+            bank: [],
+            months: [],
+            initalFeePercent: []
+        }
+
+        styles = {
+            select: {
+                minWidth: 100,
+                marginRight: 10
+            }
+        }
+
+        filters = [{
+            label: 'Модели',
+            name: 'model',
+            options: Object.keys(this.props.cars)
+        }, {
+            label: 'Типы',
+            name: 'type',
+            options: Object.keys(this.props.cars)
+        }, {
+            label: 'Банки',
+            name: 'bank',
+            options: this.props.banks.map(bank => bank.name)
+        }, {
+            label: 'Месяцы',
+            name: 'months',
+            options: [12, 24, 36, 48, 60, 72, 84]
+        }, {
+            label: 'Первоначальный взнос',
+            name: 'initalFeePercent',
+            options: [10, 20, 30, 40, 50, 60, 70]
+        }];
+
+        render() {
+            return <div>
+                {this.filters.map(filter => (
+                    <FormControl key={filter.name}>
+                        <InputLabel htmlFor={`select-multiple-${filter.name}`}>{filter.label}</InputLabel>
+                        <Select
+                            style={this.styles.select}
+                            multiple
+                            value={this.state[filter.name]}
+                            input={<Input id={`select-multiple-${filter.name}`} />}
+                            onChange={e => {
+                                this.setState({ [filter.name]: e.target.value }, () => this.props.onChange(this.state));
+                            }}
+                        >
+                            {filter.options.map(name => (
+                                <MenuItem
+                                    key={name}
+                                    value={name}
+                                >
+                                    {name}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                )
+                )}
+            </div>;
+        }
+    }
+
+    class Citroen extends React.Component {
+
+        state = {
+            filters: {}
+        }
+
+        render() {
+            return (
+                <div>
+                    <CitroenFilters {...this.props} onChange={filters => this.setState({ filters })}/>
+                    <CitroenTable {...this.props} {...this.state}/>
+                </div>
+            );
+        }
+    }
+
+    const content = document.querySelector('.content');
+    ReactDOM.render(
+        <Citroen banks={banks} cars={cars}/>,
+        content
+    );
+    </script>
+</body>
+</html>

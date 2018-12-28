@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="mini-cart"></div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script>
+            var cart = {}; //моя корзина
+
+            function init() {
+                //вычитываем файл goods.json
+                $.getJSON("goods.json", goodsOut);
+            }
+
+        function goodsOut(data) {
+            console.log('goodsOut', data);
+            //вывод на страницу
+            var out = '';
+            for (var key in data) {
+                out+='<tr class="cart_tovar">';
+                out+='<td>';
+                out+='<p class="tovar_name">'+data[key].MED_NAME+'</p>';
+                out+='</td>';
+                out+='<td>';
+                out+='<p class="tovar_manufacturer">'+data[key].VENDOR_NAME+'</p>';
+                out+='<p class="tovar_country">'+data[key].COUNTRY_NAME+'</p>';
+                out+='</td>';
+                out+='<td class="tovar_cost">от '+data[key].RPRICE+' ₽</td>';
+                out+='<td class="tovar_apteka">'+data[key].apteki+'</td>';
+                out+='<td>';
+                out+='<button class="add-to-cart" data-id="'+key+'">В корзину</button>';
+                out+='</td>';
+                out+='</tr>';
+            }
+            $('.goods-out').html(out);
+            $('.add-to-cart').on('click', addToCart);
+        }
+
+        function addToCart() {
+            //добавляем товар в корзину
+            var id = $(this).attr('data-id');
+            if (cart[id]!=undefined) {
+                cart[id]++;
+            }
+            else {
+                cart[id] = 1;
+            }
+            showMiniCart();
+            saveCart();
+        }
+
+        function saveCart() {
+            //сохраняю корзину в localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function showMiniCart(){
+            //показываю содержимое корзины
+            var out = Object.keys(cart).length;
+            $('.mini-cart').html(out);
+        }
+
+        function loadCart() {
+            //проверяю есть ли в localStorage запись car
+            if (localStorage.getItem('cart')) {
+                //если есть - расшифровываю и записываю в переменную cart
+                cart = JSON.parse(localStorage.getItem('cart'));
+                showMiniCart();
+            }
+        }
+
+        $(document).ready(function () {
+            init();
+            loadCart();
+        });
+        </script>
+    </body>
+</html>
