@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <title>
+        Благотворительный проект проекта "Спарта"
+    </title>
+    <style media="screen">
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #1A1A1A;
+            height: 68px;
+            display: flex;
+            align-items: center;
+        }
+
+        .global-nav-logo {
+            background-image: url(file:///home/vladimir/github/chebakovvladimir.github.io/logow.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            display: inline-block;
+            width: 170px;
+            height: inherit;
+            border-right: 2px double #272727;
+            position: relative;
+        }
+
+        .global-nav-logo-text {
+            color: #fff;
+            font-size: 8px;
+            position: absolute;
+            top: 48px;
+            left: 63px;
+            font-weight: bold;
+        }
+
+        .global-nav-drawer-button {
+            color: #fff;
+            background: inherit;
+            border: 0;
+            width: 70px;
+            font-size: 21px;
+            padding: 20px;
+            border-right: 2px double #272727;
+            cursor: pointer;
+        }
+
+        .global-nav-locale {
+            background-color: #1A1A1A;
+            background-position: 80% center;
+            background-size: 8px auto;
+            border: 0;
+            color: #888888;
+            display: block;
+            font-size: 15px;
+            padding: 20px 40px 20px 10px !important;
+            margin-left: auto;
+        }
+
+        header {
+            min-width: 320px;
+            overflow: hidden;
+            padding: 110px 0 110px;
+            position: relative;
+        }
+
+        .header-banner__title {
+            margin: 0 auto;
+            min-width: 320px;
+            width: 1024px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .header-banner__title h1 {
+            color: #000;
+            line-height: 1;
+            margin-bottom: -5px;
+            font-size: 80px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .header-banner__title h5 {
+            color: #9b242d;
+            font-family: "minion-pro";
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1;
+            font-size: 25px;
+        }
+
+        .header-banner--opacity {
+            background-color: #fff;
+            height: 100%;
+            left: 0;
+            opacity: .8;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .header-banner__cover {
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -2;
+        }
+
+        .header-banner__title {
+            margin: 0 auto;
+            min-width: 320px;
+            width: 1024px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 480px) {
+            .header-banner__title h1 {
+                font-size: 2.53333em;
+                line-height: .9;
+                margin-bottom: -5px;
+            }
+            .header-banner__title {
+                width: 100%;
+            }
+            .header-banner__title h5 {
+                font-size: 1.2em;
+            }
+            .header-banner {
+                padding: 16% 0;
+            }
+            .global-nav-locale {
+                width: 110px;
+            }
+            .header-banner video {
+                transform: scale(2);
+            }
+            header {
+                border-bottom: 1px solid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <nav>
+            <button class="global-nav-drawer-button" title="Expand navigation">≡</button>
+
+            <a href="/" class="global-nav-logo" title="Благотворительный проект проекта Спарта"><span class="global-nav-logo-text">БЛАГОТВОРИТЕЛЬНОСТЬ</span></a>
+
+            <select class="global-nav-locale">
+                <option class="global-nav-locale" selected="" disabled="">Язык</option>
+                <option class="global-nav-locale" value="/en/" title="en">English</option>
+                <option class="global-nav-locale" value="/ru/" title="ru">Русский</option>
+                <option class="global-nav-locale" value="/uk/" title="uk">Украинский</option>
+            </select>
+        </nav>
+        <header class="header-banner">
+            <div class="header-banner--opacity"></div>
+            <div class="header-banner__title">
+                <h1>Все жизни<br>имеют одинаковое значение</h1>
+                <h5>мы работаем над тем чтобы у всех были одинаковые условия для развития</h5>
+            </div>
+            <video class="header-banner__cover" autoplay="" muted loop="" poster="/~/media/GFO/Home/banner-1.png"><source type="video/mp4" src="https://www.gatesfoundation.org/~/media/GFO/Home/GFHPHeroVideo720p.mp4"></video></header>
+    </div>
+</body>
+
+</html>

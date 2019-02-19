@@ -1,35 +1,136 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
+ <head>
+     <style media="screen">
+     header {
+        background: url("https://image.redbull.com/rbcom/052/2018-04-18/3defc76b-795c-4cfa-a005-c2fabd43f6fb/0012/0/130/0/2008/2816/1500/1/adventure-travel-cliff.jpg") no-repeat center center;
+        background-size: cover;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+
+    #h-header {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    #h-header img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    #h-header video {
+        width: auto;
+        height: 100%;
+    }
+
+    #h-intro {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        align-items: center;
+        background: #212121;
+        opacity: 0;
+    }
+
+    #h-intro-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
+     </style>
+</head>
     <body>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
-
+        <header>
+          <div id="h-header">
+            <section id="h-intro">
+              <video id="h-intro-video" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop="loop" muted=""></video>
+            </section>
+          </div>
+          <div>
+            <h4>Unique opportunity</h4>
+            <h2>to transform</h2>
+            <h3>Discover your life.</h3>
+            <a href="#" class="book mx-auto" title="BOOK NOW<">GO</a>
+            <h1>Your new life starts there!</h1>
+          </div>
+        </header>
+        <main>
+          <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+            at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+            mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+            utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+            Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+            ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+          <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+            at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+            mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+            utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+            Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+            ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+            <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+              at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+              mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+              utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+              Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+              ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+            <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+              at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+              mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+              utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+              Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+              ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+              <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+                at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+                mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+                utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+                Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+                ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+              <p>Lorem ipsum dolor sit amet, at modo hendrerit pri. Te vix paulo fastidii concludaturque. Eos at aliquam detracto. Nam vocent placerat sententiae id, ea mea mucius antiopam. In nec idque dolore quidam. Stet disputando his id. Et ancillae nominati sea,
+                at paulo voluptatum quo. Possit nemore ei usu, no liber vituperata eum, ex natum ludus vis. Eu pri nostro nonumes constituam. Inermis voluptua nec no, duo et consequat pertinacia temporibus. Et cum laboramus democritum. Sensibus concludaturque eu
+                mei. Vidisse fabellas definitiones id vix, ius audire facilisis forensibus ea, eos persius ponderum voluptatum ei. Elit deleniti signiferumque sed id, dico audiam scaevola usu eu. Ius dicant appellantur at, et velit melius cum. Etiam labores sit no,
+                utinam luptatum conceptam per at. Sea blandit albucius liberavisse ne, nobis dignissim his ea, tantas everti delicatissimi vel no. Summo epicuri at duo. Cu duo facilisis efficiantur, eos in nemore democritum efficiendi, his an solet debitis definitiones.
+                Eu mundi iracundia eloquentiam ius. Ad voluptua consectetuer eos. Sea ei dolorem expetenda. Dicta decore accusata no mea, honestatis vituperatoribus ex quo. Mel ut nihil commodo expetenda, pri ea assum ceteros volutpat, diam partiendo molestiae vis
+                ea. Scripta diceret sed no, vis sententiae cotidieque complectitur an. Dolorum tibique scribentur pro ei, mea case eruditi ut.</p>
+        </main>
         <script>
-        function initMap() {
-            var p1 = new google.maps.LatLng(50.904091364647186, 34.80847507377776);
-            var p2 = new google.maps.LatLng(50.9170757, 34.80850970000001);
-
-            console.log(calcDistance(p1, p2));
-
-            //calculates distance between two points in km's
-           function calcDistance(p1, p2) {
-               var directionsService = new google.maps.DirectionsService;
-               directionsService.route({
-                   origin: p1,
-                   destination: p2,
-                   travelMode: 'DRIVING'
-               }, function(response, status) {
-                   if (status === 'OK') {
-                       console.log(response.routes[0].legs[0].distance.value);
-                   } else {
-                       console.log('Directions request failed due to ' + status);
-                   }
-              });
-            }
-        }
+var videoWrapper = document.querySelector('#h-intro');
+var video = document.querySelector('#h-intro-video');
+var scrollCounter = 0;
+window.addEventListener('wheel', function(e) {
+    console.log('e.deltaY', e.deltaY);
+if (e.deltaY > 0) {
+  scrollCounter++;
+} else {
+  scrollCounter--;
+  scrollCounter = scrollCounter < 0 ? 0 : scrollCounter;
+}
+    console.log('scrollCounter', scrollCounter);
+if (scrollCounter <= 10) {
+  e.preventDefault();
+  var opacity = (scrollCounter + 10) / 10 - 1;
+  videoWrapper.style.opacity = opacity;
+  if (video.paused) video.play();
+} else {
+  if (!video.paused) video.pause();
+}
+}, false);
         </script>
-    </body>
+</body>
 </html>
