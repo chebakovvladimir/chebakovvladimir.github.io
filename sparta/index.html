@@ -13,6 +13,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            color: #333;
         }
 
         nav {
@@ -175,7 +176,6 @@
         }
 
         .link-text {
-            color: #333;
             font-size: .88889em;
             line-height: 1.3;
         }
@@ -204,8 +204,8 @@
         }
 
         .divider--mission {
-    width: 100%;
-}
+            width: 100%;
+        }
 
         .divider--heading {
             margin: 10px auto 3%;
@@ -231,40 +231,43 @@
         }
 
         .divider__line--left {
-    border-top: 1px solid #70b6bc;
-    display: inline-block;
-    vertical-align: top;
-    width: calc(17% - 15px);
-        border-color: #eb9700;
-}
+            border-top: 1px solid #70b6bc;
+            display: inline-block;
+            vertical-align: top;
+            width: calc(17% - 15px);
+            border-color: #eb9700;
+        }
 
-.divider__arrow {
-    border: 1px solid #70b6bc;
-    display: inline-block;
-    height: 15px;
-    margin: -7px 2px 0;
-    -webkit-transform: rotate(138deg) skewX(20deg) skewY(20deg);
-    -ms-transform: rotate(138deg) skewX(20deg) skewY(20deg);
-    transform: rotate(138deg) skewX(20deg) skewY(20deg);
-    vertical-align: top;
-    width: 15px;
-    border-bottom: 0;
-    border-left: 0;
-}
+        .divider__arrow {
+            border: 1px solid #70b6bc;
+            display: inline-block;
+            height: 15px;
+            margin: -7px 2px 0;
+            -webkit-transform: rotate(138deg) skewX(20deg) skewY(20deg);
+            -ms-transform: rotate(138deg) skewX(20deg) skewY(20deg);
+            transform: rotate(138deg) skewX(20deg) skewY(20deg);
+            vertical-align: top;
+            width: 15px;
+        }
 
-.divider__arrow--up {
-    border-right: 0;
-    border-top: 0;
-    border-color: #eb9700;
-}
+        .divider__arrow--up {
+            border-left: 0;
+            border-bottom: 0;
+            border-color: #eb9700;
+        }
 
-.divider__line--right {
-    border-top: 1px solid #70b6bc;
-    display: inline-block;
-    vertical-align: top;
-    width: calc(83% - 15px);
-    border-color: #eb9700;
-}
+        .divider__arrow--down {
+            border-bottom: 0;
+            border-left: 0;
+        }
+
+        .divider__line--right {
+            border-top: 1px solid #70b6bc;
+            display: inline-block;
+            vertical-align: top;
+            width: calc(83% - 15px);
+            border-color: #eb9700;
+        }
 
         .circle--background {
             background-color: #eb9700;
@@ -277,127 +280,153 @@
             width: 100%;
             z-index: -1;
         }
+
         .mission-content {
-    zoom: 1;
-    margin-bottom: 6.5%;
-    overflow: hidden;
-    padding: 4% 0;
-    position: relative;
-}
+            zoom: 1;
+            margin-bottom: 6.5%;
+            overflow: hidden;
+            padding: 4% 0;
+            position: relative;
+        }
 
-.mission-content__person {
-    float: right;
-    max-width: 49%;
-    position: relative;
-    z-index: 2;
-}
+        .mission-content__person {
+            float: right;
+            max-width: 49%;
+            position: relative;
+            z-index: 2;
+        }
 
-.mission-content__title--animation {
-    margin-bottom: 0;
-    min-height: 130px;
-    position: relative;
-}
-.mission-content__title-holder {
-    opacity: 1;
-position: absolute;
-    width: 100%;
-}
+        .mission-content__title--animation {
+            margin-bottom: 0;
+            min-height: 130px;
+            position: relative;
+        }
 
-.mission-content h2.invert {
-    font-family: "ff-din-web";
-    font-weight: 600;
-    line-height: 1.1;
-    margin-bottom: 1.6%;
-}
+        .mission-content__title-holder {
+            opacity: 1;
+            width: 100%;
+        }
 
-.mission-content h2 {
-    line-height: .88;
-    margin-bottom: -.5%;
-    padding-top: 4%;
-}
-.mission-content h4.invert {
-    font-family: "DINBlack";
-    font-weight: 400;
-    line-height: .88;
-    padding-bottom: .3%;
-    border-color: #eb9700;
-}
+        .mission-content h2.invert {
+            font-weight: 600;
+            font-size: 2em;
+            line-height: 1.1;
+            margin: 15px;
+            text-transform: uppercase;
+        }
 
-.mission-content__image {
-    display: block;
-    float: left;
-    left: 27.5%;
-    margin-left: -27.5%;
-    padding-left: 8.5%;
-    position: relative;
-    width: 75%;
-}
-.mission-content__description {
-    clear: left;
-    float: left;
-    left: 12.5%;
-    margin-left: -12.5%;
-    padding-left: 8.5%;
-    padding-top: 3.2%;
-    position: relative;
-    width: 58%;
-}
-.mission-content__navigation.has-person {
-    margin-top: 4%;
-    clear: right;
-float: right;
-padding-right: 6.5%;
-position: relative;
-width: 35%;
-z-index: 1;
-}
+        .mission-content h2 {
+            line-height: .88;
+            margin-bottom: -.5%;
+            padding-top: 4%;
+        }
 
-.mission-content__description h3 {
-    margin-bottom: 3%;
-}
+        .mission-content h4.invert {
+            line-height: .88;
+            padding-bottom: .3%;
+            text-transform: uppercase;
+            font-size: 4em;
+            font-weight: bold;
+            border-bottom: 6px solid #eb9700;
+        }
 
-h3 {
-    font-size: 2.66667em;
-}
+        .mission-content__image {
+            display: block;
+            float: left;
+            left: 27.5%;
+            margin-left: -27.5%;
+            padding-left: 8.5%;
+            position: relative;
+            width: 75%;
+            padding-top: 20px;
+        }
 
-ul {
-        list-style: none;
-}
+        .mission-content__description {
+            clear: left;
+            float: left;
+            left: 12.5%;
+            margin-left: -12.5%;
+            padding-left: 8.5%;
+            position: relative;
+            width: 50%;
+        }
 
-.mission-content__description strong {
-    color: #eb9700;
-    display: block;
-    font-weight: 700;
-    line-height: 1.4;
-    margin: -1% 0 1.6%;
-    text-transform: uppercase;
-}
+        .mission-content__navigation {
+            margin-top: 4%;
+            clear: right;
+            float: right;
+            position: relative;
+            width: 35%;
+            z-index: 1;
+        }
 
-.mission-content__description p {
-    font-family: "minion-pro";
-    font-size: .88889em;
-    line-height: 1.5;
-}
+        .mission-content__description h3 {
+            margin-bottom: 3%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
-.mission-content__navigation strong {
-    background-color: #eb9700;
-    color: #fff;
-    display: block;
-    font-size: .77778em;
-    font-weight: 700;
-    line-height: 1;
-    padding: 5% 8%;
-    text-transform: uppercase;
-}
+        h3 {
+            font-size: 2.66667em;
+        }
 
-.mission-content__navigation .mission-content__navigation-links {
-    padding: 7%;
-}
+        ul {
+            list-style: none;
+        }
 
-.mission-content__navigation li {
-    margin-bottom: 12px;
-}
+        .mission-content__description strong {
+            color: #eb9700;
+            display: block;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: -1% 0 1.6%;
+            text-transform: uppercase;
+        }
 
+        .mission-content__description p {
+            font-family: "minion-pro";
+            font-size: .88889em;
+            line-height: 1.5;
+        }
+
+        .mission-content__navigation strong {
+            background-color: #eb9700;
+            color: #fff;
+            display: block;
+            font-size: .77778em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 5% 8%;
+            text-transform: uppercase;
+        }
+
+        .mission-content__navigation .mission-content__navigation-links {
+            padding: 7%;
+        }
+
+        .mission-content__navigation li {
+            margin-bottom: 12px;
+        }
+
+        p a,
+        li a,
+        div a {
+            color: #3086ab;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .circle--background__mobile {
+            background-color: #eb9700;
+            border-radius: 50%;
+            display: none;
+            height: 100%;
+            opacity: .1;
+            position: absolute;
+            right: 10%;
+            top: 0;
+            z-index: -1;
+        }
 
         @media screen and (max-width: 480px) {
             .header-banner__title h1 {
@@ -447,6 +476,54 @@ ul {
             .divider--heading {
                 width: 95%;
             }
+            .mission-content__person {
+                display: none;
+            }
+            .mission-content h2.invert {
+                font-size: 1.3em;
+                width: 100%;
+            }
+            .mission-content h4.invert {
+                border-bottom-width: 4px;
+                font-size: 2.2em;
+                width: 100%;
+            }
+            .mission-content {
+                padding: 4% 5%;
+            }
+            .mission-content__image {
+                padding-left: 0;
+                width: 100%;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            .mission-content__description {
+                padding-left: 0;
+                padding-top: 10%;
+                width: 85%;
+            }
+            .mission-content__navigation {
+                margin-top: 10%;
+            }
+            .mission-content__navigation strong {
+                padding: 2.2% 3.8%;
+            }
+            .mission-content__navigation {
+                float: left;
+                margin-top: 10%;
+                padding-right: 0;
+                width: 85%;
+            }
+            .mission-content__navigation .mission-content__navigation-links {
+                padding: 0 4%;
+            }
+            .circle--background__mobile {
+                display: block;
+            }
+            .circle--background {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -491,64 +568,58 @@ ul {
                 <span class="divider__arrow divider__arrow--down"></span>
                 <span class="divider__line"></span>
             </div>
-            <!-- <article class="mission-content">
+            <article class="mission-content">
                 <div class="circle--background"></div>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="circle--background__mobile" alt="">
                 <img src="https://www.gatesfoundation.org/~/media/GFO/Home/article1person.png?h=798&la=en&w=449" class="mission-content__person mission-content__person--animation" alt="Ensuring more young people survive and thrive">
 
                 <div class="mission-content__title--animation">
                     <div class="mission-content__title-holder js-mission-content__title-holder is-shown">
                         <h2 class="invert">
-                    Ensure more children <br>
-and young people<br>
-
-                </h2>
+                            Позволить детям
+                            <br>
+                            и молодым людям
+                        </h2>
                         <h4 class="invert">
-                    Survive&nbsp;And<br>
-Thrive
-                </h4>
+                            заниматься спортом
+                        </h4>
                     </div>
                 </div>
-                <img src="https://www.gatesfoundation.org/~/media/GFO/Home/article1.jpg?h=380&la=en&w=676" class="mission-content__image mission-content__image--animation" alt="Ensuring more young people survive and thrive" />
+                <img src="vasilkov.jpg" class="mission-content__image mission-content__image--animation" alt="Фото Васильков" />
                 <div class="mission-content__description mission-content__description--animation">
-                    <h3>
-                we believe
-            </h3>
+                    <h3>мы верим</h3>
                     <div class="divider divider--mission">
                         <span class="divider__line--left"></span>
                         <span class="divider__arrow divider__arrow--up"></span>
                         <span class="divider__line--right"></span>
                     </div>
                     <strong style="color:#eb9700;">
-                the path out of poverty begins when the next generation can access quality healthcare and a great education.
+                ПУТЬ ИЗ БЕДНОСТИ НАЧИНАЕТСЯ, КОГДА СЛЕДУЮЩЕЕ ПОКОЛЕНИЕ может получить доступ к спорту и качественному образованию.
             </strong>
                     <p>
-                        In developing countries, we focus on improving people’s health and wellbeing, helping individuals lift themselves out of hunger and extreme poverty. In the United States, we seek to ensure that all people—especially those with the fewest resources—can
-                        access the opportunities they need to succeed in school and life.
+                        Мы стремимся к тому, чтобы все люди в Украине, особенно те, у кого наименьшее количество ресурсов, имели доступ к возможностям, необходимым им для достижения успеха в школе и жизни.
                     </p>
                 </div>
-                <div class="mission-content__navigation has-person">
-                    <strong>
-                A closer Look
-            </strong>
+                <div class="mission-content__navigation">
+                    <strong>Подробности здесь</strong>
 
                     <ul class="mission-content__navigation-links">
                         <li>
-                            <a class="link-text omni-link-tracker" title="Enhance education through innovation" href="#">Enhance education through innovation
-</a>
+                            <a class="link-text omni-link-tracker" title="Ссылка 1" href="#">Ссылка 1</a>
                         </li>
                         <li>
-                            <a class="link-text omni-link-tracker" title="Improve nutrition to reduce child deaths" href="#">Improve nutrition to reduce child deaths</a>
+                            <a class="link-text omni-link-tracker" title="Ссылка 2" href="#">Ссылка 2</a>
                         </li>
                         <li>
-                            <a class="link-text omni-link-tracker" href="#" target="_blank">Invest in healthy mothers and babies</a>
+                            <a class="link-text omni-link-tracker" href="#" target="_blank">Ссылка 3</a>
                         </li>
                         <li>
-                            <a class="link-text omni-link-tracker" href="#" target="_blank">Tackle poverty in WA state</a>
+                            <a class="link-text omni-link-tracker" href="#" target="_blank">Ссылка 4</a>
                         </li>
                     </ul>
 
                 </div>
-            </article> -->
+            </article>
         </section>
     </div>
 </body>
