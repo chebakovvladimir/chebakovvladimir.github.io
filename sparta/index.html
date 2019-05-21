@@ -129,15 +129,6 @@
             height: auto;
         }
 
-        .header-banner__title {
-            margin: 0 auto;
-            min-width: 320px;
-            width: 1024px;
-            position: relative;
-            text-align: center;
-            z-index: 1;
-        }
-
         .featured-article__image {
             background-image: url(we.jpg);
             background-position: center;
@@ -181,7 +172,7 @@
             font-size: .88889em;
             line-height: 2.3;
             font-family: 'Montserrat', sans-serif;
-            padding: 30px 0;
+            padding: 30px 5%;
         }
 
         .mission {
@@ -495,7 +486,7 @@
                 font-size: 1.2em;
             }
             .header-banner {
-                padding: 5% 0;
+                padding: 0;
             }
             .global-nav-locale {
                 width: 110px;
@@ -557,10 +548,7 @@
             .mission-content__description {
                 padding-left: 0;
                 padding-top: 10%;
-                width: 85%;
-            }
-            .mission-content__navigation {
-                margin-top: 10%;
+                width: 100%;
             }
             .mission-content__navigation strong {
                 padding: 2.2% 3.8%;
@@ -582,6 +570,9 @@
             }
             input, button {
                 width: 100%;
+            }
+            .link-text {
+                text-align: center;
             }
         }
     </style>
@@ -697,22 +688,24 @@
             </article>
         </section>
         <section class="mission wow fadeIn" data-wow-delay="500ms">
-            <div class="mission-content__description mission-content__description--animation">
-                <h3>наши расходы</h3>
-                <div class="divider divider--mission">
-                    <span class="divider__line--left"  style="border-color:#70b6bc;"></span>
-                    <span class="divider__arrow divider__arrow--up" style="border-color:#70b6bc;"></span>
-                    <span class="divider__line--right" style="border-color:#70b6bc;"></span>
+            <article class="mission-content">
+                <div class="mission-content__description mission-content__description--animation">
+                    <h3>наши расходы</h3>
+                    <div class="divider divider--mission">
+                        <span class="divider__line--left"  style="border-color:#70b6bc;"></span>
+                        <span class="divider__arrow divider__arrow--up" style="border-color:#70b6bc;"></span>
+                        <span class="divider__line--right" style="border-color:#70b6bc;"></span>
+                    </div>
+                    <strong style="color:#70b6bc;">
+                        На оборудование спортивного зала мы тратим 100-150 тысяч гривен. Ежемесячные траты составляют 10-12 тысяч гривен (инвентарь и зп тренеров).
+                    </strong>
+                    <p>
+                        Большую часть денег нам приноссят благотворительные акции, которые мы проводим, остальное - ежемесячные пожертвования обычных людей.
+                        <br>
+                        Мы постоянно ищем новые детские дома и школы-интернаты для которых мы можем улучшить спортивную жизнь. И нам нужна ваша помощь.
+                    </p>
                 </div>
-                <strong style="color:#70b6bc;">
-                    На оборудование спортивного зала мы тратим 100-150 тысяч гривен. Ежемесячные траты составляют 10-12 тысяч гривен (инвентарь и зп тренеров).
-                </strong>
-                <p>
-                    Большую часть денег нам принсосят благотворительные акции, которые мы проводим, остальное - ежемесячные пожертвования обычных людей.
-                    <br>
-                    Мы постоянно ищем новые детские дома и школы-интернаты для которых мы можем улучшить спортивную жизнь. И нам нужна ваша помощь.
-                </p>
-            </div>
+            </article>
             <article class="mission-content">
                 <div class="circle--background invert"></div>
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="circle--background__mobile invert wow fadeIn" alt="">
@@ -792,7 +785,7 @@
         </section>
         <footer>
             <a href="/" class="global-nav-logo" title="Благотворительный проект проекта Спарта"><span class="global-nav-logo-text">БЛАГОТВОРИТЕЛЬНОСТЬ</span></a>
-            <div>©2019 All rights reserved.</div>
+            <div style="text-align:center">©2019 All rights reserved.</div>
         </footer>
     </div>
 </body>
